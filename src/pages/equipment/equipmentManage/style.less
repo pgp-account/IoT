@@ -1,0 +1,74 @@
+.datai{
+  height: 600px;
+}
+.datailTitle{
+  float: left;
+}
+.datailEdit {
+  zoom:1;
+  button {
+    margin-bottom: 16px;
+    float: right;
+  }
+}
+.datailEdit:after{
+  display:block;
+  clear: both;
+  content:"";
+  visibility:hidden;
+  height:0;
+}
+.datailDesc{
+  color:#708090;
+  span{
+    color:#000000;
+  }
+}
+.datailBody{
+  margin: 20px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-bottom: 1px solid #DCDCDC;
+  .datailRow{
+    box-sizing: border-box;
+    border-left: 1px solid #DCDCDC;
+    border-top: 1px solid #DCDCDC;
+    .datailLabel{
+      padding: 10px 10px;
+      background:#F5F5F5;
+      border-right: 1px solid #DCDCDC;
+      box-sizing: border-box;
+    }
+    .datailCol{
+      padding: 10px 10px;
+      border-right: 1px solid #DCDCDC;
+      box-sizing: border-box;
+    }
+  }
+
+}
+.detailDes{
+  overflow: hidden;
+  padding: 10px 10px;
+  border-right: 1px solid #DCDCDC;
+  box-sizing: border-box;
+  text-overflow:ellipsis;
+}
+
+.standardTable {
+  :global {
+    .ant-table-pagination {
+      margin-top: 24px;
+    }
+    //修改表头文字、背景颜色
+    .ant-table-thead > tr > th {
+      color: #ffffff;
+      background: #007CD4 !important;
+    }
+  }
+
+  .tableAlert {
+    margin-bottom: 16px;
+  }
+
+}

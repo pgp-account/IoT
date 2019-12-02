@@ -1,0 +1,102 @@
+@import '~antd/es/style/themes/default.less';
+
+.main{
+  width: 730px;
+  margin: 0 auto;
+  // border: 1px solid #ffffff;
+  padding: 40px 80px;
+  zoom: 1;
+  background: url("../../../../public/logoBack.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+}
+.main:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+  content: "";
+  display: block;
+  height: 0;
+  clear:both;
+  visibility: hidden;
+}
+
+.left{
+  @media screen and (max-width: @screen-sm) {
+    // width: 95%;
+    display: none;
+  }
+  .logo {
+    position:absolute;
+    top: 29%;
+    float: left;
+    height: 200px;
+    vertical-align: center;
+    background-color: #ffffff;
+  }
+}
+
+.right {
+  width: 330px;
+  float: right;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+  .header {
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .title {
+    position: relative;
+    top: 2px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    font-size: 25px;
+    font-family: Avenir, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+
+  .icon {
+    margin-left: 16px;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    line-height: 22px;
+    text-align: left;
+    .register {
+      float: right;
+      color:rgba(255,255,255,0.65);
+    }
+  }
+
+  :global {
+    .antd-pro-login-submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}
+
+.footer{
+  position: absolute;
+  bottom: 30px;
+  left: 42%;
+  color: #ffffff;
+  text-align:center;
+}

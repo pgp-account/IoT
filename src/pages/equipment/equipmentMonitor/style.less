@@ -1,0 +1,115 @@
+@import '~antd/es/style/themes/default.less';
+// @import './utils/utils.less';
+
+.tableList {
+  // height: 850px;
+  .tableListTitle{
+    float: left;
+    margin-bottom: 20px;
+  }
+  .tableListOperator {
+    zoom:1;
+    button {
+      margin-bottom: 16px;
+      float: right;
+      margin-right: 8px;
+    }
+  }
+  .tableListOperator:after{
+    display:block;
+    clear: both;
+    content:"";
+    visibility:hidden;
+    height:0;
+  }
+}
+
+
+.tableListForm {
+  :global {
+    .ant-form-item {
+      display: flex;
+      margin-right: 0;
+      margin-bottom: 24px;
+      > .ant-form-item-label {
+        width: auto;
+        padding-right: 8px;
+        line-height: 32px;
+      }
+      .ant-form-item-control {
+        line-height: 32px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+  .submitButtons {
+    display: block;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+}
+
+.standardTable {
+  :global {
+    .ant-table-pagination {
+      margin-top: 24px;
+    }
+    //修改表头文字、背景颜色
+    .ant-table-thead > tr > th {
+      color: #ffffff;
+      background: #007CD4 !important;
+    }
+  }
+
+  .tableAlert {
+    margin-bottom: 16px;
+  }
+
+}
+
+.datailBody{
+  margin: 20px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-bottom: 1px solid #DCDCDC;
+  .datailRow{
+    box-sizing: border-box;
+    border-left: 1px solid #DCDCDC;
+    border-top: 1px solid #DCDCDC;
+    .datailLabel{
+      padding: 10px 10px;
+      background:#F5F5F5;
+      border-right: 1px solid #DCDCDC;
+      box-sizing: border-box;
+    }
+    .datailCol{
+      padding: 10px 10px;
+      border-right: 1px solid #DCDCDC;
+      box-sizing: border-box;
+    }
+  }
+
+}
+
+.labal{
+  display: inline-block;
+  margin-right: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+}
+
+
+@media screen and (max-width: @screen-lg) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .tableListForm :global(.ant-form-item) {
+    margin-right: 8px;
+  }
+}
